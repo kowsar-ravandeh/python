@@ -1,0 +1,26 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# تعریف پارامتر T1
+T1 = 1  # می‌توانید مقدار T1 را تغییر دهید
+
+# ایجاد مجموعه‌ای از مقادیر t
+t = np.linspace(-2*T1, 2*T1, 1000)
+
+# تعریف تابع x(t)
+x = np.where(np.abs(t) < T1, 1, 0)
+
+# رسم نمودار
+plt.figure(figsize=(10, 5))
+plt.plot(t, x, label='x(t)', color='blue')
+plt.title('نمودار تابع x(t)')
+plt.xlabel('t')
+plt.ylabel('x(t)')
+plt.axhline(0, color='black',linewidth=0.5, ls='--')
+plt.axvline(0, color='black',linewidth=0.5, ls='--')
+plt.grid()
+plt.ylim(-0.5, 1.5)
+plt.xlim(-2*T1, 2*T1)
+plt.fill_between(t, x, color='blue', alpha=0.1)
+plt.legend()
+plt.show()
