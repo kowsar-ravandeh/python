@@ -1,0 +1,31 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# پارامترها
+T = 1  # مقدار T
+t = np.linspace(0, 3 * T, 1000)  # زمان
+
+# ورودی x(t)
+x = np.where((t > 0) & (t < T), 1, 0)
+
+# تابع ضربه h(t)
+h = np.where((t > 0) & (t < 2 * T), 1, 0)
+
+# محاسبه پاسخ y(t)
+y = np.zeros_like(t)
+
+for i in range(len(t)):
+    if 0 < t[i] < T:
+        y[i] = t[i]
+    elif T < t[i] < 2 * T:
+        y[i] = T
+
+# رسم نتایج
+plt.plot(t, y)
+plt.title('Output Response y(t)')
+plt.xlabel('Time (t)')
+plt.ylabel('y(t)')
+plt.grid()
+plt.ylim(0, 1.5)  # تنظیم حد y برای بهتر دیده شدن
+plt.xlim(0, 3 * T)  # تنظیم حد x
+plt.show()
