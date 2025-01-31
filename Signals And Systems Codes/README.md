@@ -1,4 +1,5 @@
-t1: This code snippet demonstrates the convolution of a discrete-time input signal with a unit impulse response in Python using NumPy and Matplotlib. Here’s a brief explanation:
+### t1: 
+This code snippet demonstrates the convolution of a discrete-time input signal with a unit impulse response in Python using NumPy and Matplotlib. Here’s a brief explanation:
 ### Explanation:
 - Parameters: `z` is a decay factor, and `n` defines the range of discrete time indices from 0 to 19.
 - Input Signal (`x[n]`): The input signal is defined as \( x[n] = z^n \cdot u[n] \), where \( u[n] \) is the unit step function, resulting in an exponentially decaying sequence.
@@ -8,7 +9,8 @@ t1: This code snippet demonstrates the convolution of a discrete-time input sign
 This effectively demonstrates how a discrete system responds to a given input signal.
 
 
-t2: This code snippet illustrates the convolution of a rectangular input signal with an exponentially decaying impulse response in Python using NumPy and Matplotlib. Here’s a brief explanation:
+### t2: 
+This code snippet illustrates the convolution of a rectangular input signal with an exponentially decaying impulse response in Python using NumPy and Matplotlib. Here’s a brief explanation:
 ### Explanation:
 - **Parameters**: 
   - `z` is a decay factor set to 0.5.
@@ -24,7 +26,8 @@ t2: This code snippet illustrates the convolution of a rectangular input signal 
 This code effectively demonstrates how a rectangular input signal interacts with an exponentially decaying system response.
 
 
-t3: This code snippet demonstrates the calculation of the output response of a continuous-time system in Python using NumPy and Matplotlib. Here’s a brief explanation:
+### t3: 
+This code snippet demonstrates the calculation of the output response of a continuous-time system in Python using NumPy and Matplotlib. Here’s a brief explanation:
 ### Explanation:
 - **Parameters**: 
   - `z` is set to 0.5, representing the decay factor.
@@ -40,7 +43,8 @@ t3: This code snippet demonstrates the calculation of the output response of a c
 This effectively demonstrates how a continuous-time system responds to a given input signal.
 
 
-t4: This code snippet demonstrates the calculation of the output response of a continuous-time system with a rectangular input signal and a triangular impulse response in Python using NumPy and Matplotlib. Here’s a brief explanation:
+### t4: 
+This code snippet demonstrates the calculation of the output response of a continuous-time system with a rectangular input signal and a triangular impulse response in Python using NumPy and Matplotlib. Here’s a brief explanation:
 ### Explanation:
 - **Parameters**: 
   - `T` is set to 1, representing a time constant.
@@ -58,7 +62,8 @@ t4: This code snippet demonstrates the calculation of the output response of a c
 This effectively demonstrates how a continuous-time system responds to a rectangular input signal with a triangular impulse response.
 
 
-t5: This code snippet illustrates the generation of a normalized weighted sum of sinusoidal functions in Python using NumPy and Matplotlib. Here’s a brief explanation:
+### t5: 
+This code snippet illustrates the generation of a normalized weighted sum of sinusoidal functions in Python using NumPy and Matplotlib. Here’s a brief explanation:
 ### Explanation:
 - **Parameters**:
   - `t`: A time array ranging from 0 to 1, with 1000 points for smooth plotting.
@@ -77,7 +82,8 @@ t5: This code snippet illustrates the generation of a normalized weighted sum of
 This effectively demonstrates how to create and visualize the combined effect of multiple sinusoidal functions with different weights and phases.
 
 
-t6:This code snippet demonstrates the calculation of the output response of a continuous-time system with a rectangular input signal and a unit step response in Python using NumPy and Matplotlib. Here’s a brief explanation:
+### t6:
+This code snippet demonstrates the calculation of the output response of a continuous-time system with a rectangular input signal and a unit step response in Python using NumPy and Matplotlib. Here’s a brief explanation:
 ### Explanation:
 - **Parameters**: 
   - `T` is set to 1, representing a time constant.
@@ -95,7 +101,8 @@ t6:This code snippet demonstrates the calculation of the output response of a co
 This effectively demonstrates how a continuous-time system responds to a rectangular input signal with a unit step response.
 
 
-t7: This code snippet illustrates the simulation of a capacitor charging response in an RC (resistor-capacitor) circuit using Python with NumPy and Matplotlib. Here’s a brief explanation:
+### t7: 
+This code snippet illustrates the simulation of a capacitor charging response in an RC (resistor-capacitor) circuit using Python with NumPy and Matplotlib. Here’s a brief explanation:
 ### Explanation:
 - **Parameters**: 
   - `R` is the resistance, set to 1.0 ohm.
@@ -124,7 +131,8 @@ t7: This code snippet illustrates the simulation of a capacitor charging respons
 This effectively demonstrates how a capacitor charges over time in response to an input pulse in an RC circuit.
 
 
-t8: This code snippet generates and visualizes a rectangular pulse function \( x(t) \) using Python with NumPy and Matplotlib. Here’s a brief explanation of the code:
+### t8: 
+This code snippet generates and visualizes a rectangular pulse function \( x(t) \) using Python with NumPy and Matplotlib. Here’s a brief explanation of the code:
 ### Explanation:
 - **Parameter Definition**: 
   - `T1` is set to 1, representing the width of the rectangular pulse. You can modify this value to change the width of the pulse.
