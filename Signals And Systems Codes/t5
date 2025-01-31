@@ -1,0 +1,26 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# پارامترها
+t = np.linspace(0, 1, 1000)  # زمان از 0 تا 1
+frequencies = [5, 10, 15]  # فرکانس‌های سینوسی
+weights = [0.3, 0.5, 0.2]  # وزن‌ها
+phases = [0, np.pi/4, np.pi/2]  # فازها
+
+# تولید پالس
+pulse = sum(weight * np.sin(2 * np.pi * freq * t + phase) for weight, freq, phase in zip(weights, frequencies, phases))
+
+# نرمال‌سازی پالس به بازه 0 تا 1
+pulse_normalized = (pulse - pulse.min()) / (pulse.max() - pulse.min())
+
+# رسم پالس
+plt.figure(figsize=(10, 5))
+plt.plot(t, pulse_normalized)
+plt.title("Normalized Weighted Sum of Sinusoidal Functions (0 to 1)")
+plt.xlabel("Time")
+plt.ylabel("Amplitude (0 to 1)")
+plt.grid()
+plt.xlim(0, 1)
+plt.ylim(0, 1)
+plt.axhline(0, color='black', lw=0.5, ls='--')
+plt.show()
