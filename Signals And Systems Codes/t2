@@ -1,0 +1,27 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# پارامترها
+z = 0.5
+n_x = np.arange(0, 5)  # n برای x[n]
+n_h = np.arange(0, 7)  # n برای h[n]
+
+# ورودی x[n]
+x = np.zeros(10)  # فرض می‌کنیم ناحیه بزرگی برای محاسبه داشته باشیم
+x[0:5] = 1  # x[n] = 1 برای 0 <= n <= 4
+
+# تابع ضربه h[n]
+h = np.zeros(10)
+h[0:7] = z ** n_h  # h[n] = z^n برای 0 <= n <= 6
+
+# محاسبه پاسخ y[n] با استفاده از convolution
+y = np.convolve(x, h)
+
+# رسم نتایج
+n_y = np.arange(len(y))  # n برای y[n]
+plt.stem(n_y, y)  # آرگومان use_line_collection حذف شده است
+plt.title('Output Response y[n]')
+plt.xlabel('n')
+plt.ylabel('y[n]')
+plt.grid()
+plt.show()
