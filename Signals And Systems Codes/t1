@@ -1,0 +1,23 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# پارامترها
+z = 0.5
+n = np.arange(0, 20)  # محدوده n
+
+# ورودی x[n] = z^n * u[n]
+x = z ** n
+
+# تابع ضربه h[n] = u[n]
+h = np.ones_like(n)
+
+# محاسبه پاسخ y[n] با استفاده از convolution
+y = np.convolve(x, h)[:len(n)]  # فقط مقادیر مربوط به n را نگه می‌داریم
+
+# رسم نتایج
+plt.stem(n, y)
+plt.title('Output Response y[n]')
+plt.xlabel('n')
+plt.ylabel('y[n]')
+plt.grid()
+plt.show()
