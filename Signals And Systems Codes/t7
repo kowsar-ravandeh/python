@@ -1,0 +1,31 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# پارامترها
+R = 1.0  # مقاومت
+C = 1.0  # ظرفیت
+RC = R * C
+T = 1.0  # مدت زمان پالس
+t = np.linspace(0, 5, 1000)  # زمان
+
+# ورودی x(t)
+x = np.where((t > 0) & (t < T), 1, 0)
+
+# تابع ضربه h(t) = (1/(RC)) * e^(-t/(RC)) برای t >= 0
+h = (1 / RC) * np.exp(-t / RC) * (t >= 0)
+
+# محاسبه پاسخ y(t) با استفاده از convolution
+y = np.convolve(x, h, mode='full') * (t[1] - t[0])  # نرمال‌سازی انتگرال
+
+# زمان برای پاسخ
+t_y = np.linspace(0, len(y) * (t[1] - t[0]), len(y))
+
+# رسم نتایج
+plt.plot(t_y, y)
+plt.title('Capacitor Charging Response y(t)')
+plt.xlabel('Time (t)')
+plt.ylabel('y(t)')
+plt.grid()
+plt.xlim(0, 5)
+plt.ylim(0, 1.2)
+plt.show()
