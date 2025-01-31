@@ -1,0 +1,27 @@
+import socket
+
+HOST = '127.0.0.1'
+PORT = 1234
+
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client_socket.connect((HOST, PORT))
+print(f'client connect to {HOST}:{PORT}')
+
+
+while True:
+    try:
+        message = input('enter your message (type DISCONNECT for exit): ')
+        client_socket.sendall(str.encode(message))
+        data = client_socket.recv(1024)
+        if message == 'DISCONNECT':
+            break
+        print(f'message: {data.decode()}')
+        if not data:
+            break
+        
+    except ConnectionResetError:
+        break
+
+client_socket.close()
+print('connection is closed')
+
